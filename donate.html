@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Donate to the Organization</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/records">View Donation Records</a>
+    </nav>
+    <form action="/donate" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="amount">Donation Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <label for="donation_type">Donation Type:</label>
+        <select id="donation_type" name="donation_type" required>
+            <option value="money">Money</option>
+            <option value="food">Food</option>
+        </select>
+
+        <button type="submit">Submit Donation</button>
+    </form>
+</body>
+</html>

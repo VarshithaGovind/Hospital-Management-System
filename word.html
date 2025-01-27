@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Words</title>
+    <script>
+        function convertToWords() {
+            const numberInput = document.getElementById("number").value;
+            const resultField = document.getElementById("result");
+
+            if (isNaN(numberInput) || numberInput.trim() === "") {
+                resultField.value = "Not a number";
+                return;
+            }
+
+            const number = parseInt(numberInput, 10);
+            if (number < 8 || number > 999) {
+                resultField.value = "Out of range";
+                return;
+            }
+
+            const words = [
+                "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
+                "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"
+            ];
+            const tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+            let wordResult = "";
+            if (number < 20) {
+                wordResult = words[number];
+            } else if (number < 100) {
+                wordResult = tens[Math.floor(number / 10)] + (number % 10 !== 0 ? words[number % 10] : "");
+            } else {
+                wordResult = words[Math.floor(number / 100)] + " Hundred " +
+                    (number % 100 !== 0 ? tens[Math.floor((number % 100) / 10)] + (number % 10 !== 0 ? words[number % 10] : "") : "");
+            }
+
+            resultField.value = wordResult.trim();
+        }
+
+        function resetFields() {
+            document.getElementById("number").value = "";
+            document.getElementById("result").value = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Number to Words</h1>
+    <label for="number">Enter a number between 0 and 999:</label>
+    <input type="text" id="number" />
+    <br><br>
+    <label for="result">Number in Words:</label>
+    <input type="text" id="result" readonly />
+    <br><br>
+    <button onclick="convertToWords()">Convert</button>
+    <button onclick="resetFields()">Reset</button>
+</body>
+</html>

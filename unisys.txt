@@ -1,0 +1,9 @@
+Theme: Connected world
+
+Scenario 1: Imagine a future inspired by the technology in Iron Man, where AI-powered systems autonomously build complex devices, detecting and fixing issues as they arise. In this advanced connected world, the entire manufacturing process is self-sufficient. Sensors continuously monitor equipment, detecting motor failures, broken tools, or malfunctions. Autonomous robotic systems repair any issues without human intervention, while real-time diagnostics ensure that the product under development is free from defects before continuing the process.
+Scenario 2: Waste management in the future is a testament to the efficiency of AI-powered IoT systems. At an advanced recycling facility, conveyors automatically segregate waste based on material type, detecting recyclability with remarkable precision. Smart bins autonomously relocate when full, sending the materials to dedicated recycling units. Entire cities can adopt these systems, minimizing human involvement and dramatically increasing recycling rates.
+Integrating autonomous vehicles and robotics, the waste is transported without manual effort, with the facility using real-time data analytics to optimize routes and operations, cutting down energy costs and improving urban sustainability.
+Edge computing----------------	  IoT (Internet of Things) and Industrial IoT--------------Automation, Smart Home and Smart City-----Robotics
+Localized Processing-----------------Smart Sensors-------------MANET (Mobile Ad-hoc Networking)-----------Autonomous Systems
+Distributed Networks-------------IoT Platforms--------Mobile computing-----------------------Sensors
+Fog Computing-----------5G/6G-----------------------RPA and Intelligent Automation-------------Industrial Robots

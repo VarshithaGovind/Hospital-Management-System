@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+function conversion() {
+  var ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+  var tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+  var teens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+document.getElementById("num").value.str="";
+if(n<0)
+return alert("invalid input");
+if(n==0)
+return alert("zer0");
+n=n.toString();
+var x=n.length;
+if(x==3) str+=ones[n[0]]+"Hundred"+(n[1]==1?teens[n[2]]:tens[n[1]]+ones[n[2]]);
+else if(x==2) str+=n[0]==1?teens[n[1]]:tens[n[0]]+ones[n[1]];
+else(x==1) ones[n[0]];
+document.getElementById("spell").value=str;
+}
+</script>
+</head>
+<body>
+<form>
+enter a number <input type="text" id="num"><br>
+Number in Words <input type="text" id="spell" disabled> <br><br>
+<input type="button" value="Convert" onclick="conversion()"> 
+  <input type="reset">
+</form>
+</body>
+</html>

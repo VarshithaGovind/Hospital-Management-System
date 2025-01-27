@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+function conversion() {
+  var str = "Ninety Eight";
+  document.getElementById("spell").value = str;
+}
+</script>
+</head>
+<body>
+<h1 align="center">Number to Words</h1>
+<form>
+  Enter a number between 0 and 999 <input type="text" id="num"> <br><br>
+  Number in Words <input type="text" id="spell" disabled> <br><br>
+  <input type="button" value="Convert" onclick="conversion()"> 
+  <input type="reset">
+</form>
+</body>
+</html>

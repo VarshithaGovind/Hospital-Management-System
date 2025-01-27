@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+font.thick
+{
+color:red;
+font-weight:bold;
+font-size:30;
+}
+</style>
+<script>
+function run()
+{
+var c=document.getElementById("country").value;
+document.getElementById("demo").innerHTML=c;
+}
+</script>
+</head>
+<body>
+<form onload="run()">
+<select id="country" onChange="run()">
+<option value="Delhi">India</option>
+<option value="london">uk</option>
+<option value="Tokyo">japan</option>
+</select><br>
+the capital city is
+<font class="thick" id="demo">
+</font>
+</form>
+</body>
+</html>
